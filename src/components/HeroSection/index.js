@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components'
 import {Bio} from '../../data/constants'
 import Typewriter from 'typewriter-effect';
+import profileImage from '../../images/crop3.jpg'
 
 export const HeroContainer = styled.div`
   background: ${({ theme }) => theme.card_light};
@@ -228,7 +229,9 @@ const Hero = () => {
                         <SubTitle>{Bio.description}</SubTitle>
                         <ResumeButton href={Bio.resume} target='display'>Check Resume</ResumeButton>
                     </HeroLeftContainer>
-          <HeroRightContainer></HeroRightContainer>
+          <HeroRightContainer>
+          <Img src={profileImage} alt="Profile" /> {/* Add the image source here */}
+          </HeroRightContainer>
          </HeroInnerContainer>
       </HeroContainer>
     </div>
